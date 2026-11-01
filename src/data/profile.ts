@@ -20,7 +20,7 @@ export const profile = {
   githubLabel: "github.com/harshankgit",
   resumePath: "/Harshank-Kanungo-Full-Stack-Developer.pdf",
   /** Profile photo shown in the hero (set to null to show the "HK" monogram). */
-  photo: "/profile.jpg" as string | null,
+  photo: "/harshank-kanungo.jpg" as string | null,
   initials: "HK",
   tagline:
     "I build scalable, responsive web applications across the MERN stack — from multi-vendor e-commerce and real-time bidding systems to project management tools.",

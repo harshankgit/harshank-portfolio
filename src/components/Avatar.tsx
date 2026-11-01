@@ -3,20 +3,20 @@ import { profile } from "@/data/profile";
 
 export default function Avatar() {
   return (
-    <div className="relative mx-auto h-44 w-44 sm:h-56 sm:w-56 lg:h-64 lg:w-64">
+    <div className="relative mx-auto aspect-[5/6] w-60 sm:w-72 lg:w-80">
       <div
         aria-hidden="true"
-        className="absolute -inset-6 rounded-full bg-accent/20 blur-3xl"
+        className="absolute -inset-6 rounded-[2.5rem] bg-accent/20 blur-3xl"
       />
-      <div className="relative h-full w-full rounded-full bg-gradient-to-br from-accent via-sky-300 to-indigo-500 p-[3px] shadow-2xl shadow-accent/20">
-        <div className="relative h-full w-full overflow-hidden rounded-full bg-surface">
+      <div className="relative h-full w-full rounded-3xl bg-gradient-to-br from-accent via-sky-300 to-indigo-500 p-[3px] shadow-2xl shadow-accent/20">
+        <div className="relative h-full w-full overflow-hidden rounded-[calc(1.5rem-3px)] bg-surface">
           {profile.photo ? (
             <Image
               src={profile.photo}
               alt={`Portrait of ${profile.name}`}
               fill
               priority
-              sizes="(min-width: 1024px) 256px, (min-width: 640px) 224px, 176px"
+              sizes="(min-width: 1024px) 320px, (min-width: 640px) 288px, 240px"
               className="object-cover"
             />
           ) : (
@@ -32,7 +32,7 @@ export default function Avatar() {
           )}
         </div>
       </div>
-      <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full border border-line bg-raised px-2.5 py-1 font-mono text-[11px] text-fg shadow-lg sm:bottom-5 sm:right-4">
+      <span className="absolute -bottom-4 left-1/2 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-line bg-raised/95 px-4 py-1.5 font-mono text-xs text-fg shadow-lg backdrop-blur">
         <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
         Available
       </span>
