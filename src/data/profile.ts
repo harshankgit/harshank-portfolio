@@ -19,13 +19,8 @@ export const profile = {
   github: "https://github.com/harshankgit",
   githubLabel: "github.com/harshankgit",
   resumePath: "/Harshank-Kanungo-Full-Stack-Developer.pdf",
-  /**
-   * Profile photo. LinkedIn hides the photo from public (logged-out) viewers,
-   * so it could not be fetched automatically. Drop your photo at
-   * public/profile.jpg and set this to "/profile.jpg". While null, an
-   * "HK" monogram avatar is shown instead.
-   */
-  photo: null as string | null,
+  /** Profile photo shown in the hero (set to null to show the "HK" monogram). */
+  photo: "/profile.jpg" as string | null,
   initials: "HK",
   tagline:
     "I build scalable, responsive web applications across the MERN stack — from multi-vendor e-commerce and real-time bidding systems to project management tools.",
